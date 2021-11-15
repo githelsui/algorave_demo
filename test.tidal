@@ -1,2 +1,13 @@
-d1 $ sound "bd sn"
-hush
+-- d1 $ n "c(3,8) a f e" # sound "supermandolin" # legato 4
+-- mini notation ("content inside the quotations") of a euclidian sequence
+
+d1 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "supermandolin" # legato 4
+-- canon (one melody following itself) : (|+ n 7)
+
+d2 $ chunk 4 (hurry 2) $ every 3 (# crush 2) $ chunk 4 (hurry 2) $ sound "drump clap:4 [~ snare:4] bd"
+
+d3 $ jux rev $ iter 4 $ loopAt 1 $ chop 8 $ sound "arc" # gain 1.1
+-- d1 $ sound "bd sn"
+
+
+hush --stops sound
