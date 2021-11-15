@@ -1,6 +1,12 @@
+() => (a.fft[0]*4)
+
+a.show
+
+
+-----
+Default:
+
 osc(10, 0, () => (a.fft[0]*4))
 .out()
-
-() => (a.fft[0]*4)
 
 a.show

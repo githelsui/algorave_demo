@@ -1,15 +1,22 @@
 -- d1 $ n "c(3,8) a f e" # sound "supermandolin" # legato 4
 -- mini notation ("content inside the quotations") of a euclidian sequence
 
-d1 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "supervibe" # legato 4 # gain 0.5
+d1 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "supervibe" # legato 4 # gain 0.4
 -- canon (one melody following itself) : (|+ n 7)
 
-d2 $ chunk 4 (hurry 2) $ every 3 (# crush 2) $ chunk 4 (hurry 2) $ sound "drump clap:4 [~ snare:4] bd" # gain 0.7
+d2 $ chunk 4 (hurry 2) $ every 3 (# crush 2) $ chunk 4 (hurry 2) $ sound "bd sn:4 [~ supersnare:4] bd" # gain 0.8
 
 d3 $ jux rev $ iter 4 $ loopAt 1 $ chop 8 $ sound "super808" # gain 0.8
 -- d1 $ sound "bd sn"
 
-d4 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "superhammond" # legato 4 # gain 0.8
+d4 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "superhammond" # legato 4 # gain 0.5
 
+d5 $ slow 2 $ n (toScale [5,6,10,12,15,2,4] (run 7)) # sound "pluck" # gain 3
+
+-- d6 $ slow 2 $ note "c" # sound "pluck" # gain 3
+
+-- d7 $ swingBy ("q") 8 $ fast 0.5 $ n "<[[~ 0 0] ~ [~ 0] ~]>" # sound "pluck:3" # gain "4" # pan "0.5" # shape "0.45" # resonance "0.46" # coarse 1 # lpf "60" # attack 0.05 # release 1.2
+
+d8 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "pluck:3"  # legato 4 # gain 0.9
 
 hush --stops sound
