@@ -12,6 +12,7 @@ d4 $ chunk 4 (hurry 2) $ every 3 (# crush 2) $ chunk 4 (hurry 2) $ sound "bd sn:
 
 d5 $ jux rev $ off 0.25 (|+ n 12) $ off 0.125 (|+ n 7) $ n "<c(3,8) a*2 f(3,8,2) [~ e*2]>" # sound "pluck:3"  # legato 4 # gain 1
 
+d6 $ chunk 4 (hurry 2) $ every 3 (# crush 2) $ chunk 4 (hurry 2) $ sound "snare:4 [~ snare:4] bd" # gain 0.8
 
 -- d1 $ sound "bd sn"
 
